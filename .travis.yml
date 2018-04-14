@@ -5,18 +5,18 @@ matrix:
   include:
     - os: osx
       osx_image: xcode9.3
-      env: HELLO=1
+      env: HELLO=1 FOO=A
 
     - os: osx
       osx_image: xcode9.3
-      env: HELLO=2
+      env: HELLO=2 FOO=B
 
     - os: osx
       osx_image: xcode9.3
-      env: HELLO=3
+      env: HELLO=3 FOO=C
 
 install:
   - uname -a
 
 script:
-  - echo "HELLO=${HELLO}"
+  - echo "HELLO=${HELLO} FOO=${FOO}"
